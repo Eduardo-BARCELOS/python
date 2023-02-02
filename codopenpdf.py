@@ -6,8 +6,7 @@ import email.message
 print ("este código pega uma URL que você deseje fazer o dowload de um PDF, então o link tem que ser direto de um PDF, você colocara o nome do PDF e em seguida o nome ou numero que deseja procurar nesse PDF")
 nam = (input("qual nome deseja pro arquivo? ")) + ".pdf"
 print(nam)
-#url = input("link da url")
-url = "http://revistas.inpi.gov.br/pdf/Marcas2717.pdf"
+url = input("digite a URL direta do dowload: ")
 response = requests.get(url)
 cont = 0
 lis_pages = ["",""]
