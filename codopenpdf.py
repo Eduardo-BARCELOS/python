@@ -7,6 +7,15 @@ print ("este código pega uma URL que você deseje fazer o dowload de um PDF, en
 nam = (input("qual nome deseja pro arquivo? ")) + ".pdf"
 print(nam)
 url = input("digite a URL direta do dowload: ")
+op = input("você quer enviar um email pra você com o resultado ? SIM[1] NÃO[2] ")
+if op == 1:
+    asun = input("assunto do email : ")
+    de = input("email dê? ")
+    para = input("para ? ")
+    print ("criado em apps menos seguros > apps de terceiros > adicionar > pegar senha temporaria e colocar aqui embaixo")
+    sen = input("senha ? ")
+if op == 2:
+    print("ok aguarde")
 response = requests.get(url)
 cont = 0
 lis_pages = ["",""]
@@ -42,10 +51,10 @@ def enviar_email():
    """
 
     msg = email.message.Message()
-    msg['Subject'] = "assunto"
-    msg['From'] = 'dê(email)'
-    msg['To'] = 'para(email)'
-    password = '(criado em apps menos seguros > apps de terceiros > adicionar > pegar senha temporaria e colocar aqui' 
+    msg['Subject'] = asun
+    msg['From'] = de
+    msg['To'] = para
+    password = sen
     msg.add_header('Content-Type', 'text/html')
     msg.set_payload(corpo_email )
 
