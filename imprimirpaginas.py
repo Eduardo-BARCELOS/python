@@ -10,6 +10,4 @@ def busca (filepath):
                 print(p_no)
             else:
                 data = ""
-busca("Marcas2716.pdf")
-# antes de "numpage p_no" tenta encontrar protocolo se n apagar texto e ir pra 
-# proxima interação
+busca("exemplo")
